@@ -3,14 +3,13 @@
     grid-area: footer;
 }
 
-
 .footer-container {
-    position: fixed;
-    bottom: 0;
+    position: relative;
+    bottom: 10px;
     left: 0;
     right: 0;
+    top: 0;
 }
-
 
 .social-links a i {
     color: #ffffff;
@@ -39,13 +38,4 @@
 .social-links a:hover i.fa-linkedin {
     color: #0077b5;
     /* Color de LinkedIn al hacer hover */
-}
-
-@media (min-width <=468px) {
-
-    .footer {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
 }

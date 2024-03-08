@@ -1,0 +1,56 @@
+:host {
+    display: block;
+    grid-area: content;
+    padding: 10px;
+    text-align: center;
+}
+
+body {
+    font-family: sans-serif;
+    /* Choose a preferred font family */
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.contenedor {
+    max-width: 500px;
+    margin: 0 auto;
+    /* Centers the container horizontally */
+    padding: 20px;
+    text-align: center;
+    background-color: #a0d3ff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333333;
+    line-height: 1.5;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: 70%;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    /* Add hover effect transition */
+}
+
+button:hover {
+    background-color: #0062cc;
+}
+
+#datosClima {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+}
