@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-clima',
   standalone: true,
-  imports: [CommonModule, FormsModule,], // Agregar CommonModule aquí
+  imports: [FormsModule], // Agregar CommonModule aquí
   templateUrl: './clima.component.html',
   styleUrl: './clima.component.css'
 
