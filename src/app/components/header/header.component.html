@@ -20,10 +20,17 @@
                     </ul>
                 </li>
             </ul>
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-danger" type="submit">Search</button>
-            </form>
+            <div class="search-bar">
+                <input class="form-control" type="text" [(ngModel)]="searchTerm" placeholder="Buscar componentes"
+                    (input)="search()" />
+            </div>
+            @if (componentesFiltrados.length < 2) { <ul>
+                @for (nombreComponente of componentesFiltrados; track nombreComponente) {
+                <button routerLink="{{ nombreComponente }}"
+                    class="btn btn-primary me-2 mb-2 align-items-center text-start">Search</button>
+                }
+                </ul>
+                }
         </div>
     </div>
 </nav>
