@@ -8,7 +8,7 @@ export class ComponentSearchService {
     'home',
     'clima',
     'peliculas',
-    'nasa',
+    'adivinanza',
   ];
 
   obtenerComponentesFiltrados(searchTerm: string): string[] {

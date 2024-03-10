@@ -1,0 +1,7 @@
+<div class="adivinanza-container">
+    <h1>Juego de Adivinanzas</h1>
+    <p>Intenta adivinar un número entre 1 y 10:</p>
+    <input type="number" [(ngModel)]="numeroInput" class="adivinanza-input">
+    <button (click)="adivinarNumero()" class="adivinanza-button">Adivinar</button>
+    <p>{{ resultado }}</p>
+</div>
