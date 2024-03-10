@@ -1,16 +1,7 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { UsersComponent } from './components/users/users.component';
+import { Routes } from '@angular/router';
+import { RegistroComponent } from './components/registro/registro.component';
 
 export const routes: Routes = [
-    { path: 'User', component: UsersComponent },
+    { path: 'registro', component: RegistroComponent },
     { path: '', redirectTo: '', pathMatch: 'full' }
 ];
-
-@NgModule({
-    imports: [
-        RouterModule.forRoot(routes)
-    ],
-    exports: [RouterModule]
-})
-export class AppRoutingModule { }
