@@ -1,0 +1,8 @@
+@for (pokemon of pokemonData; track pokemon) {
+<div>
+    <h2>{{ pokemon.name }}</h2>
+    <img [src]="pokemon.sprites.front_default" alt="Pokemon Image">
+    <p>Weight: {{ pokemon.weight }}</p>
+    <p>Height: {{ pokemon.height }}</p>
+</div>
+}
