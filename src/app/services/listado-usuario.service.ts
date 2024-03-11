@@ -10,5 +10,6 @@ export class ListadoUsuarioService {
 
   obtenerUsuarios() { // esta función es para obtener los usuarios de la base de datos local
     return this.http.get('http://localhost:3000/listar-usuarios'); // URL de la base de datos
+    /* return this.http.get('https://nexgen-app.onrender.com/listar-usuarios'); */
   }
 }
