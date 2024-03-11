@@ -6,13 +6,14 @@
 }
 
 h1 {
-    color: #007bff;
-    /* Azul Bootstrap */
+    color: #ff9d00;
+    /* Naranja Bootstrap */
+    font-size: 1.9em;
 }
 
 .lead {
-    color: #28a745;
-    /* Verde Bootstrap */
+    color: #004bd5;
+    /* azul Bootstrap */
 }
 
 .visit-counter {

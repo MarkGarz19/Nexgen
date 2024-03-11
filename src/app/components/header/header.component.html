@@ -26,20 +26,22 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li><a routerLink="/adivinanza" class="dropdown-item">Adivinanzas</a></li>
+                        <li><a class="dropdown-item" routerLink="/calculadora">Calculadora</a></li>
                     </ul>
                 </li>
             </ul>
-            <div class="search-bar">
-                <input class="form-control" type="text" [(ngModel)]="searchTerm" placeholder="Buscar componentes"
-                    (input)="search()" />
+            <div class="d-flex float-end">
+                <div class="search-bar">
+                    <input class="form-control" type="text" [(ngModel)]="searchTerm" placeholder="Search"
+                        (input)="search()" />
+                </div>
+                @if (componentesFiltrados.length < 2) { <ul>
+                    @for (nombreComponente of componentesFiltrados; track nombreComponente) {
+                    <button routerLink="{{ nombreComponente }}" class="btn btn-primary ">Search</button>
+                    }
+                    </ul>
+                    }
             </div>
-            @if (componentesFiltrados.length < 2) { <ul>
-                @for (nombreComponente of componentesFiltrados; track nombreComponente) {
-                <button routerLink="{{ nombreComponente }}"
-                    class="btn btn-primary me-2 mb-2 align-items-center text-start">Search</button>
-                }
-                </ul>
-                }
         </div>
     </div>
 </nav>
