@@ -16,11 +16,11 @@ export class CalculadoraComponent {
 
   constructor(private calculadoraService: CalculadoraService) { }
 
-  sumar(): void {
+  sumar(): void { // la funcion suma devolvera un resultado por la suma de dos valores
     this.resultado = this.calculadoraService.sumar(this.num1, this.num2);
   }
 
-  restar(): void {
+  restar(): void { // la funcion resta devolvera un resultado por la resta de dos valores
     this.resultado = this.calculadoraService.restar(this.num1, this.num2);
   }
 

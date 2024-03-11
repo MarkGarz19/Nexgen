@@ -6,6 +6,7 @@ import { AdivinanzaComponent } from './components/adivinanza/adivinanza.componen
 import { PokemonComponent } from './pages/pokemon/pokemon.component';
 import { CalculadoraComponent } from './components/calculadora/calculadora.component';
 import { RegistroComponent } from './components/registro/registro.component';
+import { ListadoUsuarioComponent } from './components/listado-usuario/listado-usuario.component';
 
 export const routes: Routes = [
 
@@ -16,6 +17,7 @@ export const routes: Routes = [
     { path: 'pokemon', component: PokemonComponent, title: 'Pokemon' },
     { path: 'calculadora', component: CalculadoraComponent, title: 'Calculadora' },
     { path: 'registro', component: RegistroComponent, title: 'Registro' },
+    { path: 'listado-usuario', component: ListadoUsuarioComponent, title: 'Usuarios' },
 
     { path: '**', redirectTo: '', pathMatch: 'full' },
 

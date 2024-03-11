@@ -12,16 +12,16 @@ import { FormsModule } from '@angular/forms';
 
 export class PeliculasComponent {
   searchInput: string = '';
-  movies: any[] = [];
+  movies: any[] = []; //arreglo que se va a mostrar en el html
 
   constructor(private peliculasService: PeliculasService) { }
 
-  searchMovies() {
-    this.peliculasService.searchMovies(this.searchInput).subscribe({
-      next: (response: { results: any; }) => {
+  searchMovies() { //esta funcion se encarga de buscar las peliculas
+    this.peliculasService.searchMovies(this.searchInput).subscribe({ //se hace la peticion a la API
+      next: (response: { results: any; }) => { // si la peticion es exitosa se muestra la respuesta
         this.movies = this.peliculasService.displayMovies(response.results);
       },
-      error: () => {
+      error: () => { // si la peticion falla se muestra un error
         this.movies = [{ message: 'Error al cargar las películas' }];
       }
     });

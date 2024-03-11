@@ -21,19 +21,19 @@ export class ClimaComponent {
 
   constructor() { }
 
-  buscarClima(ciudad: string) {
+  buscarClima(ciudad: string) { // la funcion buscarClima es la que se encarga de hacer la petición a la API
     if (ciudad) {
       this.fetchDatosClima(ciudad);
     }
   }
 
-  fetchDatosClima(ciudad: string) {
+  fetchDatosClima(ciudad: string) { // la funcion fetchClima es la que se encarga de procesar la respuesta
     fetch(`${this.urlBase}?q=${ciudad}&appid=${this.api_key}`)
       .then(data => data.json())
       .then(data => this.mostrarDatosClima(data));
   }
 
-  mostrarDatosClima(data: any) {
+  mostrarDatosClima(data: any) { // la funcion mostrarClima es la que se encarga de mostrar los datos del clima
     this.datosClima = {
       ciudadNombre: data.name,
       paisNombre: data.sys.country,

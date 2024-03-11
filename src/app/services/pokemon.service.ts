@@ -10,7 +10,7 @@ export class PokemonService {
 
   constructor(private http: HttpClient) { }
 
-  getPokemon(id: number): Observable<any> {
+  getPokemon(id: number): Observable<any> { // esta funcion permite obtener los datos de un pokemon especifico
     return this.http.get(`${this.apiUrl}/${id}`);
   }
 }

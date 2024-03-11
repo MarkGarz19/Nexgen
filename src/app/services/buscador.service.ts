@@ -11,9 +11,11 @@ export class ComponentSearchService {
     'adivinanza',
     'pokemon',
     'calculadora',
-  ];
+    'listado-usuario',
+    'registro',
+  ]; //arreglo con los nombres de los componentes
 
-  obtenerComponentesFiltrados(searchTerm: string): string[] {
+  obtenerComponentesFiltrados(searchTerm: string): string[] { //esta función se encarga de filtrar los componentes que coincidan con el searchTerm ingresado
     return this.nombreComponentes.filter((name) =>
       name.toLowerCase().includes(searchTerm.toLowerCase())
     );

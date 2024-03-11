@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            @if (usuarios && usuarios.length) {
+            <div>
+                <h2>Listado de Usuarios</h2>
+                <ul class="list-group">
+                    @for (usuario of usuarios; track usuario) {
+                    <li class="list-group-item mb-4 border-2">
+                        <strong>Nombre:</strong> {{ usuario.nombre }}<br>
+                        <strong>Correo:</strong> {{ usuario.correo }}<br>
+                        <strong>Contraseña:</strong> {{ usuario.contrasena }}
+                    </li>
+                    }
+                </ul>
+            </div>
+            }
+            @if (!usuarios || usuarios.length === 0) {
+            <div>
+                <div class="alert alert-secondary" role="alert">
+                    <p>No se encontraron usuarios.</p>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { PokemonService } from '../../services/pokemon.service';
-import { OnInit, Input } from '@angular/core';
+import { OnInit } from '@angular/core'; // importamos la librería OnInit que permite inicializar el componente al cargar la página
 
 @Component({
   selector: 'app-pokemon',
@@ -10,7 +10,7 @@ import { OnInit, Input } from '@angular/core';
   styleUrl: './pokemon.component.css'
 })
 export class PokemonComponent implements OnInit {
-  pokemonData: any[] = [];
+  pokemonData: any[] = []; // Array para almacenar los datos de los primeros 151 pokemónes
 
   constructor(private pokemonService: PokemonService) { }
 
@@ -20,8 +20,8 @@ export class PokemonComponent implements OnInit {
 
   getAllPokemonData(): void {
     const pokemonIds = Array.from({ length: 151 }, (_, i) => i + 1); // Obtener datos de los primeros 151 Pokémon (puedes ajustar el número según tus necesidades)
-    for (const id of pokemonIds) {
-      this.pokemonService.getPokemon(id).subscribe(data => {
+    for (const id of pokemonIds) { // Iterar sobre los IDs de los primeros 151 Pokémon
+      this.pokemonService.getPokemon(id).subscribe(data => { // Obtener datos de cada uno de los primeros 151 Pokémon
         this.pokemonData.push(data);
       });
     }

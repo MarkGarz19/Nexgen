@@ -6,8 +6,8 @@ import { RouterLink } from '@angular/router';
 import { ComponentSearchService } from '../../services/buscador.service';
 import { FormsModule } from '@angular/forms';
 
-// Importamos Observable y Subject para que cuando busquemos entre los componentes el observable se actualice cuando cambie el searchTerm
-import { Observable, Subject } from 'rxjs';
+// Importamos Subject para que cuando busquemos entre los componentes el observable se actualice cuando cambie el searchTerm
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -26,7 +26,7 @@ export class HeaderComponent {
   constructor(private componentSearchService: ComponentSearchService) { }
 
   search(): void {
-    const searchSubject = new Subject<string>();
+    const searchSubject = new Subject<string>();//se esta creando un subject que puede multidifundir valores a muchos observables
 
     // utilizamos la funcion searchTerm para que cuando cambie el searchTerm se actualice el observable
     searchSubject.subscribe((searchTerm) => {
@@ -35,7 +35,7 @@ export class HeaderComponent {
       );
     });
 
-    searchSubject.next(this.searchTerm);
+    searchSubject.next(this.searchTerm); // cuando cambie el searchTerm se actualiza el observable
   }
 
 }
