@@ -1,47 +1,48 @@
-<nav class="navbar navbar-expand-lg">
-    <div class=" container">
-        <a class="navbar-brand" routerLink=""><img class="logo" src="../../../assets/logo_nexgen.png" width="90px"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" routerLink="">Inicio</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Proyectos-APIS
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a routerLink="/clima" class="dropdown-item">Clima</a></li>
-                        <li><a class="dropdown-item" routerLink="/peliculas">Peliculas</a></li>
-                        <li><a class="dropdown-item" routerLink="/pokemon">Pokemon</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Proyectos-Components
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a routerLink="/adivinanza" class="dropdown-item">Adivinanzas</a></li>
-                        <li><a class="dropdown-item" routerLink="/calculadora">Calculadora</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="d-flex float-end">
-                <div class="search-bar">
-                    <input class="form-control" type="text" [(ngModel)]="searchTerm" placeholder="Search"
-                        (input)="search()" />
-                </div>
-                @if (componentesFiltrados.length < 2) { <ul>
-                    @for (nombreComponente of componentesFiltrados; track nombreComponente) {
-                    <button routerLink="{{ nombreComponente }}" class="btn btn-primary ">Search</button>
-                    }
-                    </ul>
-                    }
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div class=" container">
+    <a class="navbar-brand" routerLink=""><img class="logo" src="../../../assets/logo_nexgen.png" width="90px"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" routerLink="">Inicio</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Proyectos-APIS
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a routerLink="/clima" class="dropdown-item">Clima</a></li>
+                    <li><a class="dropdown-item" routerLink="/peliculas">Peliculas</a></li>
+                    <li><a class="dropdown-item" routerLink="/pokemon">Pokemon</a></li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Proyectos-Components
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a routerLink="/adivinanza" class="dropdown-item">Adivinanzas</a></li>
+                    <li><a class="dropdown-item" routerLink="/calculadora">Calculadora</a></li>
+                    <li><a class="dropdown-item" routerLink="/registro">Registro</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="d-flex float-end">
+            <div class="search-bar">
+                <input class="form-control" type="text" [(ngModel)]="searchTerm" placeholder="Search"
+                    (input)="search()" />
             </div>
+            @if (componentesFiltrados.length < 2) { <ul>
+                @for (nombreComponente of componentesFiltrados; track nombreComponente) {
+                <button routerLink="{{ nombreComponente }}" class="btn btn-primary ">Search</button>
+                }
+                </ul>
+                }
         </div>
     </div>
+</div>
 </nav>

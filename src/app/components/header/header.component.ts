@@ -1,7 +1,5 @@
 // Se importar NgModule para utilizar los componentes de Ng con Bootstrap
 import { Component } from '@angular/core';
-
-// Sirve para redirigir a las paginas
 import { RouterLink } from '@angular/router';
 
 // Hacemos la importacion del injector del buscador para que pueda buscar entre las paginas

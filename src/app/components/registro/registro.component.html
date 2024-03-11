@@ -1,0 +1,27 @@
+<div class="container">
+    <form (ngSubmit)="onSubmit()" class="col-md-6 offset-md-3 col-sm-12 mb-5">
+        <div class="text-center mb-4">
+            <h1 class="h3 mb-3 font-weight-normal">Ingresa tus datos</h1>
+            <p>Por favor, completa este formulario</p>
+        </div>
+
+        <div class="form-group mb-3"> <label for="nombre">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" required [ngModel]="nombre"
+                (ngModelChange)="nombre = $event">
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="correo">Correo:</label>
+            <input type="email" class="form-control" id="correo" name="correo" required [ngModel]="correo"
+                (ngModelChange)="correo = $event">
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" class="form-control" id="contrasena" name="contrasena" required
+                [ngModel]="contrasena" (ngModelChange)="contrasena = $event">
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+    </form>
+</div>
