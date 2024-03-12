@@ -15,7 +15,7 @@ export class AdivinanzaComponent {
 
   constructor(private adivinanzaService: AdivinanzaService) { }
 
-  adivinarNumero() { //método para llamar al método de la clase AdivinanzaService
-    this.resultado = this.adivinanzaService.comprobarAdivinanza(this.numeroInput); //llamamos al método de la clase AdivinanzaService para comprobar el número
+  adivinarNumero() { //función para llamar al método de la clase AdivinanzaService
+    this.resultado = this.adivinanzaService.comprobarAdivinanza(this.numeroInput); //llamamos la función de la clase AdivinanzaService para comprobar el número
   }
 }
